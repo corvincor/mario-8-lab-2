@@ -46,21 +46,18 @@
 
     <a-cylinder position="0 0.7 0" radius="0.01" height="0.8" color="#666666"></a-cylinder>
 
-    <!-- FLAG GROUP (рухається вгору) -->
     <a-entity
       position="0 0.05 0"
       animation="property: position; from: 0 0.05 0; to: 0 0.75 0; dur: 4000; easing: easeOutQuad">
 
-      <!-- flag cloth -->
       <a-plane
         position="0.12 0.1 0"
-        width="0.25"
+        width="2"
         height="0.12"
         color="#ffffff"
         animation="property: rotation; from: 0 0 -10; to: 0 0 10; dir: alternate; loop: true; dur: 300">
       </a-plane>
 
-      <!-- text ON flag -->
       <a-text
         value="Thank You Mario\nBut Our Princess Is in\nAnother Castle"
         position="0 0.1 0.01"
