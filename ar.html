@@ -34,17 +34,10 @@
     <a-box position="0 0.3 0" width="0.6" height="0.4" depth="0.6"
            material="src:#brick; repeat:2 2"></a-box>
 
-    <a-cylinder position="-0.25 0.25 -0.25" radius="0.12" height="0.5"
-                material="src:#brick"></a-cylinder>
-
-    <a-cylinder position="0.25 0.25 -0.25" radius="0.12" height="0.5"
-                material="src:#brick"></a-cylinder>
-
-    <a-cylinder position="-0.25 0.25 0.25" radius="0.12" height="0.5"
-                material="src:#brick"></a-cylinder>
-
-    <a-cylinder position="0.25 0.25 0.25" radius="0.12" height="0.5"
-                material="src:#brick"></a-cylinder>
+    <a-cylinder position="-0.25 0.25 -0.25" radius="0.12" height="0.5" material="src:#brick"></a-cylinder>
+    <a-cylinder position="0.25 0.25 -0.25" radius="0.12" height="0.5" material="src:#brick"></a-cylinder>
+    <a-cylinder position="-0.25 0.25 0.25" radius="0.12" height="0.5" material="src:#brick"></a-cylinder>
+    <a-cylinder position="0.25 0.25 0.25" radius="0.12" height="0.5" material="src:#brick"></a-cylinder>
 
     <a-cone position="-0.25 0.55 -0.25" radius-bottom="0.15" height="0.2" color="#cc0000"></a-cone>
     <a-cone position="0.25 0.55 -0.25" radius-bottom="0.15" height="0.2" color="#cc0000"></a-cone>
@@ -53,17 +46,30 @@
 
     <a-cylinder position="0 0.7 0" radius="0.01" height="0.8" color="#666666"></a-cylinder>
 
-    <a-plane position="0 0.9 0" width="0.25" height="0.12" color="#ffffff"
-             animation="property: rotation; from: 0 0 -10; to: 0 0 10; dir: alternate; loop: true; dur: 300"></a-plane>
+    <!-- FLAG GROUP (рухається вгору) -->
+    <a-entity
+      position="0 0.05 0"
+      animation="property: position; from: 0 0.05 0; to: 0 0.75 0; dur: 4000; easing: easeOutQuad">
 
-    <a-plane position="0 0.35 0.3" width="0.7" height="0.25" color="#ffffff"></a-plane>
+      <!-- flag cloth -->
+      <a-plane
+        position="0.12 0.1 0"
+        width="0.25"
+        height="0.12"
+        color="#ffffff"
+        animation="property: rotation; from: 0 0 -10; to: 0 0 10; dir: alternate; loop: true; dur: 300">
+      </a-plane>
 
-    <a-text value="Thank You Mario\nBut Our Princess Is in\nAnother Castle"
-            position="0 0.35 0.31"
-            align="center"
-            color="black"
-            width="1.2">
-    </a-text>
+      <!-- text ON flag -->
+      <a-text
+        value="Thank You Mario\nBut Our Princess Is in\nAnother Castle"
+        position="0 0.1 0.01"
+        align="center"
+        color="black"
+        width="1.2">
+      </a-text>
+
+    </a-entity>
 
   </a-entity>
 
